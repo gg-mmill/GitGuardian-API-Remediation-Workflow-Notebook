@@ -1,4 +1,4 @@
-# GitGuardian API Remediaion Workflow Kitchen Sink
+# GitGuardian API Remediaion Workflow Notebook
 
 ## What
 A [Jupyter Notebook](https://jupyter.org/install) to learn how to use the GitGuardian APIs and experiment with automation.
