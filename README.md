@@ -1,9 +1,12 @@
 # GitGuardian API Remediaion Workflow Kitchen Sink
 
 ## What
-A [Jupyter Notebook](https://jupyter.org/install) to run locally to learn how to use the GitGuardian APIs.
+A [Jupyter Notebook](https://jupyter.org/install) to learn how to use the GitGuardian APIs and experiment with automation.
 
-The notebook walks through using the GitGuardian API for:  
+This project contains 2 different notebooks.
+
+1. `API-Remediation-Workflow.ipynb`
+This notebook walks through using the GitGuardian API for:  
 - Authentication
 - Listing triggered incidents
 - Assigning incidents
@@ -11,24 +14,25 @@ The notebook walks through using the GitGuardian API for:
 - Resovling incidents
 - Ignoring incidents
 - Sharing incidents
-- Scaning for secrets (though you are likely better off using [ggshield](https://github.com/GitGuardian/ggshield) for that)
+- Scaning for secrets in a file
 
-### Automating a workflow example
-The last section of the notebook combines several steps into one!
-With a single code execution the example
-- Gets a list of the most recent triggered incidents
-- Assigns the newest one to the first listed member of the workspace (owner in most cases)
-- Generates and prints the sharing URL
-- Prints the updated incident details as a json dump for further inspection
+2. `GitGuardian-API-Automation-Examples.ipynb`
+This notebook shows 3 examples of automating workflows with the API and a little Python logic. 
+The automations included are
+- 1. Auto-assign the newest incident to a random member of the workspace.
+- 2. Auto-assign incident to commit author if they are a member of the workspace.
+- 3. Ignore an incident and mark it as a 'test credential' if all occurrences of a secret are in a /test/ directory and invalid.
 
 
 ## How
 Prerequisites:
 - You will need to have [Jupyter Notebook](https://jupyter.org/install) installed for this to run locally. 
 - You will need to have a GitGuardian account with Owner (preferred) or Member access. 
+- The Python code requires installing the [`requests` library](https://pypi.org/project/requests/).
 
 1. Clone this repo
-2. `cd` to the folder locally
-3. run the command `jupyter notebook` in your terminal
-4. follow the instructions in the notebook
+2. `cd` to the projecg folder locally.
+3. Run the command `jupyter notebook` in your terminal.
+4. Select one of the notebooks listed. If it is your first time, choose the `API-Remediation-Workflow.ipynb` file. 
+5. Follow the instructions in the notebook.
 
